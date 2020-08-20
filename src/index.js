@@ -16,9 +16,9 @@ const ProductCategoryRow =(props)=> {
   
 }
 
-class ProductRow extends React.Component {
-  render() {
-    const product = this.props.product;
+const ProductRow = (props) => {
+  
+    const product = props.product;
     const name = product.stocked ?
       product.name :
       <span style={{color: 'red'}}>
@@ -31,7 +31,6 @@ class ProductRow extends React.Component {
         <td>{product.price}</td>
       </tr>
     );
-  }
 }
 
 const ProductTable =(props)=>{
@@ -114,7 +113,8 @@ const SearchBar =(props)=> {
 
 const FilterableProductTable = (props) =>  {
 
-  const [filterText , setFilterText] = useState('');
+    //useState
+    const [filterText , setFilterText] = useState('');
     const [inStockOnly , setInStockOnly] =useState(false);
 
   // constructor(props) {
@@ -129,10 +129,10 @@ const FilterableProductTable = (props) =>  {
   // }
 
 
-  //useState
 
 
 
+  // handler
   const handleFilterTextChange  = (filterText) => {
     // this.setState({
     //   filterText: filterText
